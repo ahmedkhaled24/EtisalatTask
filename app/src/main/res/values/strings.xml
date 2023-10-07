@@ -2,6 +2,12 @@
     <string name="app_name">EtisalatTask</string>
 
     <string name="name">Name: %s</string>
+    <string name="name_top">Name: \n%s</string>
+    <string name="desc">Description: \n%s</string>
     <string name="calories">Calories: %s</string>
+    <string name="carbos">Carbos: %s</string>
+    <string name="fats">Fats: %s</string>
+    <string name="proteins">Proteins: %s</string>
+    <string name="details">Details:</string>
 
 </resources>

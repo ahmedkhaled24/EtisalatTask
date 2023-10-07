@@ -1,5 +1,9 @@
 package com.etisalattask.ahmedkhaled.data.model.response
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class RecipesResponse(
     val calories: String,
     val carbos: String,
@@ -13,4 +17,4 @@ data class RecipesResponse(
     val proteins: String,
     val thumb: String,
     val time: String
-)
+):Parcelable

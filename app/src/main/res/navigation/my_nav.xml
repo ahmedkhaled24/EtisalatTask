@@ -9,5 +9,17 @@
         android:id="@+id/recipesFragment"
         android:name="com.etisalattask.ahmedkhaled.presentation.ui.RecipesFragment"
         android:label="fragment_recipes"
-        tools:layout="@layout/fragment_recipes" />
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_recipesFragment_to_recipesDetailsFragment"
+            app:destination="@id/recipesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipesDetailsFragment"
+        android:name="com.etisalattask.ahmedkhaled.presentation.ui.RecipesDetailsFragment"
+        android:label="RecipesDetailsFragment" >
+        <argument
+            android:name="recipesItem"
+            app:argType="com.etisalattask.ahmedkhaled.data.model.response.RecipesResponse" />
+    </fragment>
 </navigation>

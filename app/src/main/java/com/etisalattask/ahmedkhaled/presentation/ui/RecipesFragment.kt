@@ -7,15 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.etisalattask.ahmedkhaled.data.model.response.RecipesResponse
 import com.etisalattask.ahmedkhaled.databinding.FragmentRecipesBinding
+import com.etisalattask.ahmedkhaled.presentation.adapters.RecipesActions
 import com.etisalattask.ahmedkhaled.presentation.adapters.RecipesAdapter
 import com.etisalattask.ahmedkhaled.presentation.viewmodels.RecipesViewModel
 import com.etisalattask.ahmedkhaled.utils.Resource
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
-class RecipesFragment : Fragment() {
+class RecipesFragment : Fragment(), RecipesActions {
 
     private lateinit var binding: FragmentRecipesBinding
     private val viewModel: RecipesViewModel by viewModels()
@@ -54,7 +56,11 @@ class RecipesFragment : Fragment() {
     }
 
     private fun setUpRecyclerRecipesData() {
-        adapter = RecipesAdapter()
+        adapter = RecipesAdapter(this)
         binding.recipesRecyclerView.adapter = adapter
+    }
+
+    override fun onClickItem(item: RecipesResponse) {
+        findNavController().navigate(RecipesFragmentDirections.actionRecipesFragmentToRecipesDetailsFragment(item))
     }
 }
