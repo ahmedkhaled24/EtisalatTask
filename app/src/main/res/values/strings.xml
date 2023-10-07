@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EtisalatTask</string>
+
+    <string name="name">Name: %s</string>
+    <string name="calories">Calories: %s</string>
+
 </resources>
