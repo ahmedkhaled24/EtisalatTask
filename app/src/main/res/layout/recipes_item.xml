@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +7,7 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/_10sdp"
     app:cardElevation="@dimen/_3sdp"
-    android:layout_margin="@dimen/_7sdp"
+    android:layout_margin="@dimen/_5sdp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -66,11 +65,6 @@
             app:layout_constraintTop_toBottomOf="@+id/training_title"
             tools:text="45 minutes" />
 
-
-
     </LinearLayout>
-
-
-
 
 </androidx.cardview.widget.CardView>
