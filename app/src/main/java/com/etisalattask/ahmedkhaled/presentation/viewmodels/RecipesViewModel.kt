@@ -12,7 +12,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class RecipesViewModel @Inject constructor(private val recipesUseCase: RecipesUseCase) : ViewModel() {
+class RecipesViewModel @Inject constructor(private val recipesUseCase: RecipesUseCase) :
+    ViewModel() {
 
     private val _recipes: MutableLiveData<Resource<ArrayList<RecipesResponse>>> =
         MutableLiveData()

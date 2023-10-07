@@ -21,7 +21,11 @@ class RecipesFragment : Fragment() {
     private val viewModel: RecipesViewModel by viewModels()
     private lateinit var adapter: RecipesAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentRecipesBinding.inflate(layoutInflater, container, false)
         return binding.root
     }

@@ -13,11 +13,11 @@ import com.etisalattask.ahmedkhaled.R
 import com.etisalattask.ahmedkhaled.data.model.response.RecipesResponse
 import com.squareup.picasso.Picasso
 
-class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.RecipesViewHolder>()  {
+class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.RecipesViewHolder>() {
 
     private lateinit var context: Context
 
-    class RecipesViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class RecipesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // init views
         private val img: ImageView = itemView.findViewById(R.id.recipesImg)
         private val name: TextView = itemView.findViewById(R.id.recipesName)
@@ -51,7 +51,9 @@ class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.RecipesViewHolder>() 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipesViewHolder {
         context = parent.context
-        return RecipesViewHolder(LayoutInflater.from(context).inflate(R.layout.recipes_item, parent, false))
+        return RecipesViewHolder(
+            LayoutInflater.from(context).inflate(R.layout.recipes_item, parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: RecipesViewHolder, position: Int) {
